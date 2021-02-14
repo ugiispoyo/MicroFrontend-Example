@@ -15,6 +15,7 @@ const prodConfig = {
             name: 'container',
             remotes: {
                 reactapp: `reactapp@${domain}/reactapp/remoteEntry.js`,
+                vueapp: `vueapp@${domain}/vueapp/remoteEntry.js`,
             },
             shared: packageJson.dependencies
         })

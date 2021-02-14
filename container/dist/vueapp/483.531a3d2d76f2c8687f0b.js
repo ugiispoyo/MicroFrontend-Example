@@ -1,0 +1,1 @@
+(self.webpackChunkvueapp=self.webpackChunkvueapp||[]).push([[483],{483:(e,n,u)=>{"use strict";u.r(n),u.d(n,{mount:()=>a});var c=u(394),r=(0,c.createVNode)("h1",null,"Hallo ini vue",-1);const t={render:function(e,n){return(0,c.openBlock)(),(0,c.createBlock)("div",null,[r])}};var a=function(e){(0,c.createApp)(t).mount(e)}}}]);
