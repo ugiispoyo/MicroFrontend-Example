@@ -8,6 +8,7 @@
     <li>npm install</li>
     <li>npm run start</li>
     <li>open browser "http://localhost:8082/"</li>
+</ul>
 </hr/>
 <h3>2. Run ReactApp</h3>
 <ul>
@@ -16,6 +17,7 @@
     <li>npm install</li>
     <li>npm run start</li>
     <li>open browser "http://localhost:8081/"</li>
+</ul>
 </hr/>
 <h3>3. Run Container</h3>
 <ul>
@@ -33,6 +35,7 @@
     <li>go to folder vueApp</l1>
     <li>npm install</li>
     <li>npm run build</li>
+</ul>
 </hr/>
 <h3>2. Run ReactApp</h3>
 <ul>
@@ -40,6 +43,7 @@
     <li>go to folder vueApp</l1>
     <li>npm install</li>
     <li>npm run build</li>
+</ul>
 </hr/>
 <h3>3. Run Container</h3>
 <ul>
