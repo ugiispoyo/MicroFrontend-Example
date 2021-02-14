@@ -51,7 +51,7 @@
     <li>go to folder container</l1>
     <li>npm install</li>
     <li>npm run build</li>
-    <li>connect nginx to folder container/dist</li>
+    <li>connect nginx to folder "container/dist"</li>
 </ul>
 </hr/>
 <p>Note: This container using react framework</p>
