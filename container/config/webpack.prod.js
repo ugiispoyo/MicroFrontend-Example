@@ -2,9 +2,8 @@ const { merge } = require('webpack-merge');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const packageJson = require('./../package.json');
-const Dotenv = require('dotenv-webpack');
 
-const domain = process.env.DOMAIN_PROD;
+const domain = "http://test-microfrontend.ugiispoyowidodo.com/";
 
 const prodConfig = {
     mode: 'production',
@@ -18,10 +17,6 @@ const prodConfig = {
                 reactapp: `reactapp@${domain}/reactapp/remoteEntry.js`,
             },
             shared: packageJson.dependencies
-        }),
-        new Dotenv({
-            path: './../.env',
-            safe: false,
         })
     ]
 };
