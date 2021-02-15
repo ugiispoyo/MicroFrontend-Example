@@ -1,4 +1,10 @@
 <h1>MicroFrontend</h1>
+<h2>About MicroFrontend</h2>
+<p>Micro Frontends is to think about a website or web app as a composition of features which are owned by independent teams. Each team has a distinct area of business or mission it cares about and specialises in. A team is cross functional and develops its features end-to-end, from database to user interface.</p>
+<span>
+    <a href="https://micro-frontends.org/">Detail Link</a>
+</span>
+</hr>
 <h2>How to run development</h2>
 <hr/>
 <h3>1. Run VueApp</h3>
