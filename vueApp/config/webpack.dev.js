@@ -5,32 +5,32 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const devConfig = {
-  mode: 'development',
-  output: {
-    publicPath: 'http://localhost:8082/',
-  },
-  devServer: {
-    port: 8082,
-    historyApiFallback: {
-      index: 'index.html',
+    mode: 'development',
+    output: {
+        publicPath: 'http://localhost:8082/',
     },
-    headers: {
-      'Access-Control-Allow-Origin': '*',
+    devServer: {
+        port: 8082,
+        historyApiFallback: {
+            index: 'index.html',
+        },
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
     },
-  },
-  plugins: [
-    new ModuleFederationPlugin({
-      name: 'vueapp',
-      filename: 'remoteEntry.js',
-      exposes: {
-        './VueApp': './src/bootstrap',
-      },
-      shared: packageJson.dependencies,
-    }),
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-    }),
-  ],
+    plugins: [
+        new ModuleFederationPlugin({
+            name: 'vueapp',
+            filename: 'remoteEntry.js',
+            exposes: {
+                './VueApp': './src/bootstrap',
+            },
+            shared: packageJson.dependencies,
+        }),
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+        }),
+    ],
 };
 
 module.exports = merge(commonConfig, devConfig);
