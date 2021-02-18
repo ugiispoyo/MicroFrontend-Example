@@ -62,10 +62,10 @@
 <hr/>
 <h5>Nginx.conf</h5>
 <pre>
-    server_name microfrontend.ugiispoyowidodo.com;
-    access_log /var/log/nginx/microfrontend.ugiispoyowidodo.log;
+    server_name test-microfrontend.ugiispoyowidodo.com;
+    access_log /var/log/nginx/test-microfrontend.ugiispoyowidodo.log;
 
-    root /home/web/microfrontend-tutor/packages/container/dist;
+    root /home/web/test-microfrontend/container/dist;
     index index.html index.htm index.nginx-debian.html;
     location / {
                 if (!-e $request_filename){
