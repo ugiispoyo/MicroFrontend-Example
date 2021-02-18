@@ -68,16 +68,19 @@
     root /home/web/test-microfrontend/container/dist;
     index index.html index.htm index.nginx-debian.html;
     location / {
-                if (!-e $request_filename){
-                rewrite ^(.*)$ /index.html break;
+        if (!-e $request_filename){
+            rewrite ^(.*)$ /index.html break;
         }
+        try_files $uri /index.html;
+        autoindex on;
+        autoindex_exact_size off;
     }
 </pre>
 <hr/>
 <h5>Express</h5>
 <pre>
     app.get('/*', function(req, res) {
-        res.sendFile(path.join(__dirname, '/home/web/test-microfrontend/container/dist/index.html'), function(err) {
+        res.sendFile(path.join(__dirname, '/home/web/test-microfrontend/container/dist/index.html'),function(err) {
             if (err) {
                 res.status(500).send(err)
             }
