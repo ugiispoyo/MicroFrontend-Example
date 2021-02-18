@@ -59,7 +59,41 @@
     <li>npm run build</li>
     <li>connect nginx to folder "container/dist"</li>
 </ul>
-</hr/>
+<hr/>
+<h5>Nginx.conf</h5>
+<pre>
+    server_name microfrontend.ugiispoyowidodo.com;
+    access_log /var/log/nginx/microfrontend.ugiispoyowidodo.log;
+
+    root /home/web/microfrontend-tutor/packages/container/dist;
+    index index.html index.htm index.nginx-debian.html;
+    location / {
+                if (!-e $request_filename){
+                rewrite ^(.*)$ /index.html break;
+        }
+    }
+</pre>
+<hr/>
+<h5>Express</h5>
+<pre>
+    app.get('/*', function(req, res) {
+        res.sendFile(path.join(__dirname, 'path/to/your/index.html'), function(err) {
+            if (err) {
+                res.status(500).send(err)
+            }
+        })
+    })
+</pre>
+<hr/>
+<h5>Apache .htaccess</h5>
+<pre>
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</pre>
+<hr/>
 <p>Note: This container using react framework</p>
 <a href="http://test-microfrontend.ugiispoyowidodo.com/" target="_blank">
     Link Demo
