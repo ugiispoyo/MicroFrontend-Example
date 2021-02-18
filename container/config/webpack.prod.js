@@ -8,7 +8,8 @@ const domain = "http://test-microfrontend.ugiispoyowidodo.com";
 const prodConfig = {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].js'
+        filename: '[name].[contenthash].js',
+        publicPath: '/',
     },
     plugins: [
         new ModuleFederationPlugin({
