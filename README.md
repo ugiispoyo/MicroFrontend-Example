@@ -98,8 +98,5 @@
 </pre>
 <hr/>
 <p>Note: This container using react framework</p>
-<a href="http://test-microfrontend.ugiispoyowidodo.com/" target="_blank">
-    Link Demo
-</a>
 <hr/>
 <span>By: Ugi Ispoyo Widodo</span>
